@@ -1,13 +1,24 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+
+import { useDispatch } from "react-redux";
+import { authenticationSliceActions } from "../../Store/AuthenticationSlice";
 
 import { GrCubes } from "react-icons/gr";
 import { BsPerson } from "react-icons/bs";
 import { BiMessageAltMinus } from "react-icons/bi";
 import { FiSettings } from "react-icons/fi";
-import { MdPeopleOutline } from "react-icons/md";
+import { MdPeopleOutline, MdOutlineLogout } from "react-icons/md";
 
 const DNav = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  function logOutHandler() {
+    dispatch(authenticationSliceActions.logOut());
+    navigate("/");
+  }
+
   return (
     <nav className="fixed left-0 top-0 w-56 h-screen overflow-hidden p-4 bg-white">
       <div className="flex items-center gap-3 ">
@@ -103,6 +114,16 @@ const DNav = () => {
               </span>
             )}
           </NavLink>
+        </li>
+        <li className="font-semibold rounded-xl my-1 hover:bg-blue-100">
+          <button
+            type="button"
+            className="flex w-full p-4 items-center gap-3"
+            onClick={logOutHandler}
+          >
+            <MdOutlineLogout />
+            Log Out
+          </button>
         </li>
       </ul>
     </nav>

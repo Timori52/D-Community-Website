@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 import LandingPage from "./Pages/LandingPage";
-import AuthenticationPage from "./Pages/AuthenticationPages/AuthenticationPage";
+import AuthenticationPage from "./Pages/AuthenticationPage";
 import NotFoundPage from "./Pages/NotFoundPage";
 
 import AHomePage from "./Pages/AdminPages/AHomePage";
@@ -53,10 +53,7 @@ const App = () => {
           </Route>
 
           {/* developer routes */}
-          <Route
-            path="developer"
-            element={<DeveloperPage onIsLoggedIn={isLoggedIn} />}
-          >
+          <Route path="developer" element={<DeveloperPage />}>
             {!isLoggedIn && (
               <Route
                 path="auth"

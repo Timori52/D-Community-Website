@@ -46,10 +46,10 @@ const Authentication = (props) => {
 
     if (isLogin) {
       url =
-        "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyApWBTcETIhCGh2dkCa2qC4SxtBNGZoiVQ";
+        "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyDs8ZnbOntyVpA64aqHE7F2gG2QTSgtoxc";
     } else {
       url =
-        "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyApWBTcETIhCGh2dkCa2qC4SxtBNGZoiVQ";
+        "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyDs8ZnbOntyVpA64aqHE7F2gG2QTSgtoxc";
     }
 
     fetch(url, {

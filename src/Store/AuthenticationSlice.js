@@ -19,6 +19,7 @@ const authenticationSlice = createSlice({
     logOut(state) {
       state.idToken = "";
       state.isLoggedIn = false;
+
       localStorage.removeItem("idToken");
       localStorage.removeItem("userType");
     },
