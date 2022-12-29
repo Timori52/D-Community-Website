@@ -12,16 +12,19 @@ const ViewingSharing = () => {
     whoCanSeeProfile: "everyone",
     whoCanFollow: "everyone",
   });
+  const [isDisable, setIsDisable] = useState(true);
 
-  function viewShareHandler(e) {
+  function viewShareChangeHandler(e) {
     const { name, value } = e.target;
     setViewShare({ ...viewShare, [name]: value });
+    setIsDisable(false);
   }
 
   function viewShareSubmitHandler(e) {
     e.preventDefault();
 
     console.log(viewShare);
+    setIsDisable(true);
   }
 
   return (
@@ -41,7 +44,7 @@ const ViewingSharing = () => {
             defaultValue="everyone"
             name="whoCanSeePost"
             value={viewShare.whoCanSeePost}
-            onChange={viewShareHandler}
+            onChange={viewShareChangeHandler}
           >
             <FormControlLabel
               value="everyone"
@@ -70,7 +73,7 @@ const ViewingSharing = () => {
             defaultValue="everyone"
             name="whoCanSeeProfile"
             value={viewShare.whoCanSeeProfile}
-            onChange={viewShareHandler}
+            onChange={viewShareChangeHandler}
           >
             <FormControlLabel
               value="everyone"
@@ -99,7 +102,7 @@ const ViewingSharing = () => {
             defaultValue="everyone"
             name="whoCanFollow"
             value={viewShare.whoCanFollow}
-            onChange={viewShareHandler}
+            onChange={viewShareChangeHandler}
           >
             <FormControlLabel
               value="everyone"
@@ -117,7 +120,9 @@ const ViewingSharing = () => {
         <div className="flex justify-center">
           <button
             type="submit"
-            className="px-4 py-2 font-semibold bg-customBlue rounded-md text-white"
+            className={`${
+              isDisable ? "bg-gray-500 cursor-not-allowed" : "bg-customBlue"
+            } px-4 py-2 font-semibold rounded-md text-white`}
           >
             Save
           </button>

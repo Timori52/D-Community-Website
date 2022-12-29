@@ -23,15 +23,19 @@ const Notifications = () => {
     follow: true,
   });
 
-  function notificationHandler(e) {
+  const [isDisable, setIsDisable] = useState(true);
+
+  function notificationChangeHandler(e) {
     const { name, checked } = e.target;
     setNotifications({ ...notifications, [name]: checked });
+    setIsDisable(false);
   }
 
   console.log(notifications.follow);
 
   function notificationsSubmitHandler(e) {
     e.preventDefault();
+    setIsDisable(true);
   }
   return (
     <section className="w-[calc(100%-14rem)] h-screen ml-auto bg-white p-3">
@@ -50,7 +54,7 @@ const Notifications = () => {
               control={
                 <Switch
                   defaultChecked
-                  onChange={notificationHandler}
+                  onChange={notificationChangeHandler}
                   name="like"
                 />
               }
@@ -68,7 +72,7 @@ const Notifications = () => {
               control={
                 <Switch
                   defaultChecked
-                  onChange={notificationHandler}
+                  onChange={notificationChangeHandler}
                   name="comment"
                 />
               }
@@ -86,7 +90,7 @@ const Notifications = () => {
               control={
                 <Switch
                   defaultChecked
-                  onChange={notificationHandler}
+                  onChange={notificationChangeHandler}
                   name="mention"
                 />
               }
@@ -104,7 +108,7 @@ const Notifications = () => {
               control={
                 <Switch
                   defaultChecked
-                  onChange={notificationHandler}
+                  onChange={notificationChangeHandler}
                   name="post"
                 />
               }
@@ -122,7 +126,7 @@ const Notifications = () => {
               control={
                 <Switch
                   defaultChecked
-                  onChange={notificationHandler}
+                  onChange={notificationChangeHandler}
                   name="share"
                 />
               }
@@ -140,7 +144,7 @@ const Notifications = () => {
               control={
                 <Switch
                   defaultChecked
-                  onChange={notificationHandler}
+                  onChange={notificationChangeHandler}
                   name="follow"
                 />
               }
@@ -152,7 +156,9 @@ const Notifications = () => {
         <div className="mt-8 flex justify-center">
           <button
             type="submit"
-            className="px-4 py-2 font-semibold bg-customBlue rounded-md text-white"
+            className={`${
+              isDisable ? "bg-gray-500 cursor-not-allowed" : "bg-customBlue"
+            } px-4 py-2 font-semibold rounded-md text-white`}
           >
             Save
           </button>
