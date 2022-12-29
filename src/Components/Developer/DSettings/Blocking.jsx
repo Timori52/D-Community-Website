@@ -2,6 +2,8 @@ import React from "react";
 import { Input } from "@material-tailwind/react";
 import { AiOutlineSearch } from "react-icons/ai";
 
+import { dummyNotifications } from "../../../data/TestimonialData";
+
 const Blocking = () => {
   return (
     <section className="w-[calc(100%-14rem)] h-screen ml-auto bg-white p-3">
@@ -20,23 +22,27 @@ const Blocking = () => {
 
         <h2 className="my-4 font-semibold">Blocked Users list</h2>
         <ul className="w-full max-h-[60vh] overflow-scroll">
-          <li className="flex">
-            <img
-              src={require("../../../../src/assets/akashDave.png")}
-              alt=""
-              className="w-10 h-10 rounded-full mr-2"
-            />
-            <div>
-              <p className="font-semibold">Name here</p>
-              <small className="text-xs">Blocked - 29/12/2022</small>
-            </div>
-            <button
-              type="button"
-              className="bg-customBlue px-4 py-2 font-semibold rounded-md text-white ml-auto"
-            >
-              Unblock
-            </button>
-          </li>
+          {dummyNotifications.map((notification) => (
+            <li key={notification.id} className="flex my-5">
+              <img
+                src={notification.image}
+                alt={notification.name}
+                className="w-10 h-10 rounded-full mr-2"
+              />
+              <div>
+                <p className="font-semibold">{notification.name}</p>
+                <small className="text-xs flex">
+                  Blocked - {notification.elsTime}
+                </small>
+              </div>
+              <button
+                type="button"
+                className="bg-customBlue px-4 py-2 font-semibold rounded-md text-white ml-auto"
+              >
+                Unblock
+              </button>
+            </li>
+          ))}
         </ul>
       </div>
     </section>
