@@ -148,17 +148,41 @@ const DeveloperHome = () => {
                 </div>
               </div>
               <div className='flex justify-center items-center py-5 gap-4'>
-                <div className='w-5 h-5'>
-                  <img src={globe} alt='' className='w-full h-full' />
+                <div className='w-5 h-5 cursor-pointer'>
+                  <a
+                    href='http://www.google.com'
+                    target='_blank'
+                    rel='noreferrer'
+                  >
+                    <img src={globe} alt='' className='w-full h-full' />
+                  </a>
                 </div>
-                <div className='w-5 h-5'>
-                  <img src={facebook} alt='' className='w-full h-full' />
+                <div className='w-5 h-5 cursor-pointer'>
+                  <a
+                    href='http://www.facebook.com'
+                    target='_blank'
+                    rel='noreferrer'
+                  >
+                    <img src={facebook} alt='' className='w-full h-full' />
+                  </a>
                 </div>
-                <div className='w-5 h-5'>
-                  <img src={twitter} alt='' className='w-full h-full' />
+                <div className='w-5 h-5 cursor-pointer'>
+                  <a
+                    href='http://www.twitter.com'
+                    target='_blank'
+                    rel='noreferrer'
+                  >
+                    <img src={twitter} alt='' className='w-full h-full' />
+                  </a>
                 </div>
-                <div className='w-5 h-5'>
-                  <img src={instagram} alt='' className='w-full h-full' />
+                <div className='w-5 h-5 cursor-pointer'>
+                  <a
+                    href='http://www.instagram.com'
+                    target='_blank'
+                    rel='noreferrer'
+                  >
+                    <img src={instagram} alt='' className='w-full h-full' />
+                  </a>
                 </div>
               </div>
               <div className='flex justify-between items-center gap-4'>
