@@ -4,10 +4,15 @@ import PhotoIcon from '../../../assets/DHome-icons/photo-icon.svg';
 import SmileyIcon from '../../../assets/DHome-icons/smile.svg';
 import ThreeDot from '../../../assets/DHome-icons/3-horizontal-dots-icon.svg';
 
+import globe from '../../../assets/DHome-icons/social-icon/globe.svg';
+import facebook from '../../../assets/DHome-icons/social-icon/facebook-svgrepo-com.svg';
+import twitter from '../../../assets/DHome-icons/social-icon/twitter-outline-svgrepo-com.svg';
+import instagram from '../../../assets/DHome-icons/social-icon/instagram-o-svgrepo-com.svg';
+
 const DeveloperHome = () => {
   return (
     <section className='relative'>
-      <div className='flex'>
+      <div className='flex gap-6'>
         <div className='flex flex-col'>
           <div className='rounded-xl shadow-gray-300 shadow-lg bg-white p-3'>
             <div className='flex flex-row items-center gap-2 '>
@@ -76,7 +81,7 @@ const DeveloperHome = () => {
                   />
                 </div>
                 <div>
-                  <h4 className='font-bold'> Sepural Gallery </h4>
+                  <h4 className='font-medium'> Sepural Gallery </h4>
                   <p className='text-gray-500 text-xs'>15h, Public</p>
                 </div>
               </div>
@@ -115,6 +120,54 @@ const DeveloperHome = () => {
               <div className='flex gap-2 text-sm text-gray-500'>
                 <p>3 Comments</p>
                 <p>17 Share</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div className='rounded-xl shadow-gray-300 shadow-lg bg-white w-80'>
+            <div className='flex justify-between items-center p-3'>
+              <p>You Might Like</p>
+              <button className='text-blue-700 text-sm'>See all</button>
+            </div>
+            <hr />
+            <div className='p-3'>
+              <div className='flex gap-4'>
+                <div className='w-10 h-10'>
+                  <img
+                    src={require('../../../assets/DHome-icons/profile.png')}
+                    alt=''
+                    className='w-full h-full'
+                  />
+                </div>
+                <div>
+                  <h4 className='font-medium'>Radovan SkillArena</h4>
+                  <p className='text-xs text-gray-500'>
+                    Founder & CEO at Trophy
+                  </p>
+                </div>
+              </div>
+              <div className='flex justify-center items-center py-5 gap-4'>
+                <div className='w-5 h-5'>
+                  <img src={globe} alt='' className='w-full h-full' />
+                </div>
+                <div className='w-5 h-5'>
+                  <img src={facebook} alt='' className='w-full h-full' />
+                </div>
+                <div className='w-5 h-5'>
+                  <img src={twitter} alt='' className='w-full h-full' />
+                </div>
+                <div className='w-5 h-5'>
+                  <img src={instagram} alt='' className='w-full h-full' />
+                </div>
+              </div>
+              <div className='flex justify-between items-center gap-4'>
+                <button className='bg-white border-2 py-1 px-4 w-1/2 rounded-lg hover:bg-gray-300'>
+                  Ignore
+                </button>
+                <button className='bg-blue-500 text-white border-2 border-blue-500 py-1 px-4 w-1/2 rounded-lg hover:brightness-110'>
+                  Follow
+                </button>
               </div>
             </div>
           </div>
