@@ -6,7 +6,7 @@ import DNav from "../../Components/Developer/DNav";
 
 const DeveloperPage = (props) => {
   return (
-    <div className="bg-gray-100">
+    <div className="w-[73%]">
       <DHeader />
       <DNav />
 
