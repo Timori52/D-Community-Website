@@ -50,6 +50,7 @@ const DeveloperHome = () => {
                 </div>
                 <span className='text-sm'>Live Video</span>
               </div>
+
               <div className='flex items-center cursor-pointer hover:bg-gray-100 active:bg-gray-200 rounded-lg p-1'>
                 <div className='w-5 h-5 inline-block mr-2'>
                   <img
@@ -60,6 +61,7 @@ const DeveloperHome = () => {
                 </div>
                 <span className='text-sm'>Photo/Video</span>
               </div>
+
               <div className='flex items-center cursor-pointer hover:bg-gray-100 active:bg-gray-200 rounded-lg p-1'>
                 <div className='w-5 h-5 inline-block mr-2'>
                   <img
@@ -106,6 +108,7 @@ const DeveloperHome = () => {
                 className='w-full h-full'
               />
             </div>
+
             <div className='flex justify-between mt-4'>
               <div className='flex items-center cursor-pointer'>
                 <div className='w-6 h-6 '>
