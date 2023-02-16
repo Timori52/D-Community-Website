@@ -6,13 +6,13 @@ import { dummyNotifications } from "../../../data/TestimonialData.js";
 const DNotification = () => {
   return (
     <section className="">
-      <div className="relative rounded-xl h-full p-4 w-[70%] bg-white">
+      <div className="relative rounded-2xl h-full p-5 w-[70%] bg-white">
         <h1 className="flex justify-between font-bold text-xl mb-4">
           Notifications
           <IoSettingsOutline className=" cursor-pointer" />
         </h1>
         <hr />
-        <ul className="w-full max-h-[80vh] overflow-scroll">
+        <ul className="w-full max-h-[78vh] overflow-scroll ">
           {dummyNotifications.map((notification) => (
             <div key={notification.id}>
               <li className="flex my-5">
@@ -24,7 +24,7 @@ const DNotification = () => {
                 <div>
                   <p className="font-semibold">{notification.name}</p>
                   <small className="text-xs flex">
-                    <HiClock />
+                    <HiClock/>
                     {notification.elsTime}
                   </small>
                 </div>
@@ -35,7 +35,7 @@ const DNotification = () => {
                   Follows you
                 </button>
               </li>
-              <hr className="w-full" />
+              <hr/>
             </div>
           ))}
         </ul>
